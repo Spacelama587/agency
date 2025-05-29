@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./hero.css">
     <link rel="stylesheet" href="./about.css">
     <link rel="stylesheet" href="./project.css">
+    <link rel="stylesheet" href="./video.css">
     <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
     <title>Document</title>
 </head>
@@ -337,7 +338,49 @@
 
         <section class="footer"></section>
     </section>
+    <!-- Intro Section -->
 
+    <section class="intro-section" id="drone-intro">
+        <h1 class="intro-title">Above <span class="highlight">The</span><br>Horizon</h1>
+        <div class="intro-subtitle">We offer Drone footages that redefines visual storytelling</div>
+        <p class="intro-description">
+            Witnessing landscapes transform into abstract compositions. Where ordinary becomes extraordinary through the lens of elevation and perspective.
+        </p>
+    </section>
+
+    <!-- Drone Video Section -->
+    <div class="drone-scroll-container">
+        <div class="drone-video-wrapper">
+            <div id="drone-container">
+                <video class="drone-video" loop muted playsinline autoplay>
+                    <source src="https://videos.pexels.com/video-files/3173389/3173389-uhd_2560_1440_30fps.mp4" type="video/mp4">
+                    <source src="https://videos.pexels.com/video-files/854400/854400-hd_1920_1080_30fps.mp4" type="video/mp4">
+                </video>
+                
+                <div class="drone-overlay">
+                    <div class="flight-info">Flight 003</div>
+                    <div class="coordinates">37.7749° N, 122.4194° W</div>
+                    
+                    <div class="main-content">
+                        <h2>Beyond <span class="accent">Boundaries</span></h2>
+                        <p class="description">
+                            From this vantage point, patterns emerge that ground-level vision cannot perceive. The ordinary transforms into extraordinary.
+                        </p>
+                        <div class="altitude">Altitude: 120m AGL</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <section class="conclusion-section">
+        <h2 class="conclusion-title">The View<br>From Above</h2>
+        <p class="conclusion-text">
+            The drone's perspective reveals interconnected spaces and hidden rhythms. It captures the poetry written in landscape and light—stories only visible from the sky.
+        </p>
+        <div class="conclusion-signature">Captured from Above — 2025</div>
+    </section>
      <script src="https://unpkg.com/lenis@1.1.4/dist/lenis.min.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
@@ -345,6 +388,7 @@
      <script src="./lenis.js"></script>
      <script src="./about.js"></script>
      <script src="./project.js"></script>
+     <script src="./video.js"></script>
 </body>
 
 </html>
