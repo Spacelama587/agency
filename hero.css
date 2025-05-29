@@ -1,0 +1,113 @@
+h4 {
+  font-family: "Satoshi-Bold";
+}
+h1 {
+  font-family: "Satoshi-Medium";
+  font-size: 4vw;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+#hero {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 95%;
+  max-width: 1600px;
+}
+
+.nav_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 1rem 0 2 rem 0;
+}
+
+nav {
+  width: 450px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+nav li a {
+  opacity: 0.8;
+    font-family: 'Satoshi-Bold';
+}
+.circle {
+  background-color: rgba(242, 49, 49, 0.89);
+ 
+
+  color: rgb(245, 247, 249);
+
+}
+
+.hero-para{
+      font-family: 'Satoshi-LightItalic';
+      font-size:1.5rem;
+}
+
+.carousel{
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+    overflow: hidden;
+    background-color: black;
+}
+
+.carousel_inner{
+    position: relative;
+   display: flex;
+   width: 200%;
+   animation: marquee 10s linear infinite;
+
+}
+
+.item{
+    flex: 1;
+    justify-content: center;
+    align-item: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.left_carousel{
+    position: absolute;
+    left:0;
+    top:0;
+    width:30%;
+    height:100%;
+    background: linear-gradient(270deg, transparent, rgba(4, 4, 4, 0.89));
+    z-index: 1;
+}
+
+.right_carousel{
+    position: absolute;
+    right:0;
+    top:0;
+    width:30%;
+    height:100%;
+    background: linear-gradient(90deg, transparent, rgba(4, 4, 4, 0.89));
+    z-index: 1;
+}
+@keyframes marquee{
+     0%{
+        transform: translate(0)
+     }
+     100%{
+        transform: translateX(-50%)
+     }
+}
+
