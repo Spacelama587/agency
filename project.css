@@ -1,0 +1,252 @@
+  :root {
+            --color-bg-primary: #ffffff;
+            --color-bg-secondary: #f8f8f8;
+            --color-text: #000000;
+            --color-text-light: #666666;
+            --color-accent: #ff4444;
+            --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-secondary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+    
+
+        #projects {
+            font-family: var(--font-primary);
+            background: var(--color-bg-primary);
+            color: var(--color-text);
+            overflow-x: hidden;
+            line-height: 1.4;
+            margin-top: 7em;
+            border-radius:40px;
+        }
+
+        .sticky-cards {
+            position: relative;
+        }
+
+     
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--color-text-light);
+        }
+
+        section.card {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-bg-primary);
+        }
+
+        .card.scroll {
+            position: relative;
+        }
+
+        .project {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            width: 90%;
+            max-width: 1200px;
+            height: 100%;
+            display: flex;
+            background: var(--color-bg-primary);
+            border: 1px solid #e0e0e0;
+            overflow: hidden;
+        }
+
+        .project-copy {
+            position: relative;
+            flex: 1.5;
+            padding: 3rem;
+            background: var(--color-bg-secondary);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-img {
+            flex: 2;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            filter: grayscale(20%);
+        }
+
+        .project:hover .project-img img {
+            transform: scale(1.02);
+            filter: grayscale(0%);
+        }
+
+        .project-header {
+            margin-bottom: 2rem;
+        }
+
+        .project-number {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-header h3 {
+            color: var(--color-text);
+            font-family: var(--font-secondary);
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--color-text);
+            margin-bottom: 2rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tag {
+            padding: 0.4rem 0.8rem;
+            background: transparent;
+            color: var(--color-text-light);
+            border: 1px solid #ddd;
+            font-size: 0.85rem;
+            font-weight: 400;
+        }
+
+        .project-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .cta-label {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            font-weight: 400;
+        }
+
+        .project-cta-row {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cta {
+            flex: 1;
+            padding: 0.8rem 1.5rem;
+            background: var(--color-text);
+            border: none;
+            color: white;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .cta:hover {
+            background: var(--color-accent);
+        }
+
+        .cta.secondary {
+            background: transparent;
+            border: 1px solid var(--color-text);
+            color: var(--color-text);
+        }
+
+        .cta.secondary:hover {
+            background: var(--color-text);
+            color: white;
+        }
+
+        .footer {
+            height: 50vh;
+            background: var(--color-bg-primary);
+        }
+
+        /* Client logos section */
+        .client-logos {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--color-text);
+            padding: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            opacity: 0.6;
+        }
+
+        .client-logo {
+            color: #666;
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 900px) {
+            .project {
+                flex-direction: column;
+                width: 95%;
+                height: 85%;
+            }
+
+            .project-copy {
+                flex: 1;
+                padding: 2rem;
+            }
+
+            .project-img {
+                flex: 1.5;
+            }
+
+            .project-header h3 {
+                font-size: 1.8rem;
+            }
+
+            .project-cta-row {
+                flex-direction: column;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .client-logos {
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+        }
+
+        /* Highlighted text styling */
+        .highlight-red {
+            background: var(--color-accent);
+            color: white;
+            padding: 0.1em 0.3em;
+            margin: 0 0.1em;
+        }
